@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>khushi Construction | Expert Builders</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">KHUSHI <span>Construction</span></div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#" class="btn-login">Client Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Expert Builders in Meerut</h1>
+            <p>Quality Construction & Industrial Projects tailored to your needs.</p>
+            <a href="#contact" class="cta-btn">Get Free Quotation</a>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <h2>Our Services</h2>
+        <div class="service-container">
+            <div class="service-box">
+                <div class="icon">🏠</div>
+                <h3>Residential Construction</h3>
+                <p>Building your dream home with precision and care.</p>
+            </div>
+            <div class="service-box">
+                <div class="icon">🏢</div>
+                <h3>Commercial Buildings</h3>
+                <p>Modern workspaces and commercial complexes.</p>
+            </div>
+            <div class="service-box">
+                <div class="icon">📐</div>
+                <h3>Architecture Design</h3>
+                <p>Innovative designs that blend style with functionality.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <h2>Contact Us for Quotation</h2>
+        <div class="contact-container">
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Email Address" required>
+                <textarea rows="5" placeholder="Project Details (Construction Type)"></textarea>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 KHUSHI Construction | Meerut & Modinagar</p>
+    </footer>
+
+<section id="stats" class="stats-section">
+    <div class="stats-container">
+        <div class="stat-item">
+            <span class="stat-number" data-count="100">0</span>+
+            <p>Projects Completed</p>
+        </div>
+        <div class="stat-item">
+            <span class="stat-number" data-count="10">0</span>+
+            <p>Years Experience</p>
+        </div>
+        <div class="stat-item">
+            <span class="stat-number" data-count="50">0</span>+
+            <p>Expert Labor</p>
+        </div>
+        <div class="stat-item">
+            <span class="stat-number" data-count="100">0</span>%
+            <p>Happy Clients</p>
+        </div>
+    </div>
+</section>
+
+<section id="gallery" class="gallery-section">
+    <h2>Our Recent Work</h2>
+    <div class="gallery-grid">
+        <div class="gallery-item"><img src="project1.jpg" alt="Project 1"></div>
+        <div class="gallery-item"><img src="project2.jpg" alt="Project 2"></div>
+        <div class="gallery-item"><img src="project3.jpg" alt="Project 3"></div>
+        <div class="gallery-item"><img src="project4.jpg" alt="Project 4"></div>
+    </div>
+</section>
+
+<section id="testimonials" class="testimonials-section">
+    <h2>Client Testimonials</h2>
+    <div class="testimonial-container">
+        <div class="testimonial-item">
+            <p>"Khushi Construction ne hamara ghar bilkul time par aur best quality material ke saath banaya."</p>
+            <h4>- Rajesh Kumar, Meerut</h4>
+        </div>
+        <div class="testimonial-item">
+            <p>"Excellent service! The team is professional, skilled, and very cooperative."</p>
+            <h4>- Priya Singh, Modinagar</h4>
+        </div>
+    </div>
+</section>
+
+<a href="https://wa.me/8979770393" class="whatsapp-float" target="_blank">
+    <img src="whatsapp-icon.png" alt="WhatsApp" />
+</a>
+
+<section id="map" class="map-section">
+    <h2>Visit Us</h2>
+    <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6981.421479025409!2d77.66206179357906!3d28.966302900000017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390c65001989f7f5%3A0x67bb7346fc06dbb3!2sNai%20Basti%20Lallapura%2C%20Meerut!5e0!3m2!1sen!2sin!4v1774373425594!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+</section>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+        var a = 0;
+        $(window).scroll(function() {
+            var statsSection = $('#stats');
+            if (statsSection.length) {
+                var oTop = statsSection.offset().top - window.innerHeight;
+                if (a == 0 && $(window).scrollTop() > oTop) {
+                    $('.stat-number').each(function() {
+                        var $this = $(this),
+                            countTo = $this.attr('data-count');
+                        $({
+                            countNum: $this.text()
+                        }).animate({
+                            countNum: countTo
+                        }, {
+                            duration: 2000,
+                            easing: 'swing',
+                            step: function() {
+                                $this.text(Math.floor(this.countNum));
+                            },
+                            complete: function() {
+                                $this.text(this.countNum);
+                            }
+                        });
+                    });
+                    a = 1; // Ye 'if' ke andar hona chahiye
+                }
+            }
+        }); // Yahan scroll function band hua
+    }); // Yahan document ready band hua
+</script>
+
+</body>
+</html>

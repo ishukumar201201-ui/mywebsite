@@ -1,0 +1,335 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Navbar */
+header {
+    background: #fff;
+    padding: 20px 10%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1a2a6c;
+}
+
+.logo span {
+    color: #f39c12;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #f39c12;
+}
+
+.btn-login {
+    background: #1a2a6c;
+    color: #fff !important;
+    padding: 8px 20px;
+    border-radius: 5px;
+}
+
+/* Hero Section */
+.hero {
+    height: 80vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('hero-bg.png') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+.hero h1 {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.cta-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 30px;
+    background: #f39c12;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.cta-btn:hover {
+    background: #e67e22;
+}
+
+/* Services */
+.services {
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.service-container {
+    display: flex;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.service-box {
+    flex: 1;
+    background: #fff;
+    padding: 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.service-box:hover {
+    transform: translateY(-10px);
+}
+
+/* Form */
+.contact-section {
+    background: #f1f1f1;
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.contact-container {
+    max-width: 600px;
+    margin: 40px auto;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    background: #f39c12;
+    color: white;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+    background: #1a2a6c;
+    color: #fff;
+}
+
+/* ==============================
+     2. PROFESSIONAL FEATURES START
+     ============================== */
+
+/* STATS COUNTER */
+.stats-section {
+    background-color: #1a2a6c;
+    color: #fff;
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.stat-item {
+    font-size: 1.2rem;
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #f39c12;
+}
+
+/* RECENT PROJECTS GALLERY */
+.gallery-section {
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.gallery-section h2 {
+    margin-bottom: 40px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.1);
+}
+
+/* CLIENT TESTIMONIALS */
+.testimonials-section {
+    background-color: #f1f1f1;
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.testimonials-section h2 {
+    margin-bottom: 40px;
+}
+
+.testimonial-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.testimonial-item {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.testimonial-item p {
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.testimonial-item h4 {
+    color: #1a2a6c;
+}
+
+/* FLOATING WHATSAPP BUTTON */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 1000;
+}
+
+.whatsapp-float img {
+    width: 30px;
+    margin-top: 15px;
+}
+
+/* GOOGLE MAPS */
+.map-section {
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.map-section h2 {
+    margin-bottom: 40px;
+}
+
+.map-container {
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* ==============================
+     2. PROFESSIONAL FEATURES END
+     ============================== */
+
+  /* FLOATING WHATSAPP BUTTON */
+.whatsapp-float {
+    position: fixed !important;
+    width: 60px !important;
+    height: 60px !important;
+    bottom: 20px !important;
+    right: 20px !important;
+    background-color: #25d366 !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    z-index: 1000 !important;
+    overflow: hidden !important; /* Ye sabse zaruri hai stretch rokne ke liye */
+    padding: 0 !important;
+    animation: bounce 2s infinite ease-in-out, pulse-green 2s infinite !important;
+}
+
+.whatsapp-float img {
+    /* Square image ko center mein fix karne ke liye */
+    width: 70% !important;  /* 100% ki jagah 70% karein taaki thoda margin rahe */
+    height: 70% !important; /* Height aur Width barabar rakhein taaki gol dikhe */
+    object-fit: contain !important; /* Cover ki jagah contain karein */
+    display: block !important;
+    border-radius: 0 !important; /* Image ko gol karne ki zarurat nahi, container gol hai */
+}
+
+/* 1. Bounce Animation Code */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* 2. Pulse Animation Code */
+@keyframes pulse-green {
+    0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+    70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
