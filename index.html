@@ -3,163 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KHUSHI Construction | Expert Builders in Meerut</title>
-    <link rel="stylesheet" href="style.css?v=1.4">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>KHUSHI Construction | Engineering & Construction</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <header>
         <nav>
-            <div class="logo">KHUSHI <span>Construction</span></div>
-            <ul class="nav-links">       
+            <div class="logo">KHUSHI <span>CONSTRUCTION</span></div>
+            <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
-                <li><a href="#gallery">Work</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li>
-                <div class="theme-switch-wrapper">
+                <li class="nav-right">
                     <label class="theme-switch" for="checkbox">
                         <input type="checkbox" id="checkbox" />
                         <div class="slider"></div>
                     </label>
-                    <span class="mode-label">Dark Mode</span>
-                </div>
-            </li>
-                <li><a href="login.html" class="btn-login">Client Login</a></li>
+                    <a href="login.html" class="login-btn">Client Login</a>
+                </li>
             </ul>
         </nav>
     </header>
 
     <section id="home" class="hero">
+        <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h1>Expert Builders in Meerut</h1>
-            <p>Quality Construction & Industrial Projects tailored to your needs.</p>
-            <a href="#contact" class="cta-btn">Get Free Quotation</a>
-        </div>
-    </section>
-
-    <section id="stats" class="stats-section">
-        <div class="stats-container">
-            <div class="stat-item">
-                <i class="fas fa-building" style="font-size: 2.5rem; color: #1a2a6c; margin-bottom: 15px;"></i>
-                <span class="stat-number" data-count="100">0</span>
-                <p>Projects Completed</p>
-            </div>
-            <div class="stat-item">
-                <i class="fas fa-trowel-bricks" style="font-size: 2.5rem; color: #1a2a6c; margin-bottom: 15px;"></i>
-                <span class="stat-number" data-count="10">0</span>
-                <p>Years Experience</p>
-            </div>
-            <div class="stat-item">
-                <i class="fas fa-helmet-safety" style="font-size: 2.5rem; color: #1a2a6c; margin-bottom: 15px;"></i>
-                <span class="stat-number" data-count="50">0</span>
-                <p>Expert Labor</p>
-            </div>
-            <div class="stat-item">
-                <i class="fas fa-smile-beam" style="font-size: 2.5rem; color: #1a2a6c; margin-bottom: 15px;"></i>
-                <span class="stat-number" data-count="100">0</span>
-                <p>Happy Clients %</p>
+            <h1>BUILDING THE FUTURE</h1>
+            <p>Expert Engineering Solutions for Modern Infrastructure.</p>
+            <div class="hero-btns">
+                <a href="#services" class="cta-primary">Our Projects</a>
+                <a href="#contact" class="cta-secondary">Get a Quote</a>
             </div>
         </div>
     </section>
 
-    <section id="services" class="services">
-        <h2>Our Services</h2>
-        <div class="service-container">
-            <div class="service-box">
-                <div class="icon">🏠</div>
-                <h3>Residential Construction</h3>
-                <p>Building your dream home with precision and care.</p>
-            </div>
-            <div class="service-box">
-                <div class="icon">🏢</div>
-                <h3>Commercial Buildings</h3>
-                <p>Modern workspaces and commercial complexes.</p>
-            </div>
-            <div class="service-box">
-                <div class="icon">📐</div>
-                <h3>Architecture Design</h3>
-                <p>Innovative designs that blend style with functionality.</p>
-            </div>
-        </div>
+    <section id="stats" class="stats-bar">
+        <div class="stat"><span>25+</span><p>Years Experience</p></div>
+        <div class="stat"><span>500+</span><p>Projects Done</p></div>
+        <div class="stat"><span>100%</span><p>Safety Record</p></div>
     </section>
 
-    <section id="gallery" class="gallery-section">
-        <h2>Our Recent Work</h2>
-        <div class="gallery-grid">
-            <div class="gallery-item"><img src="project1.jpg" alt="Project 1"></div>
-            <div class="gallery-item"><img src="project2.jpg" alt="Project 2"></div>
-            <div class="gallery-item"><img src="project3.jpg" alt="Project 3"></div>
-            <div class="gallery-item"><img src="project4.jpg" alt="Project 4"></div>
-        </div>
-    </section>
-
-    <section id="testimonials" class="testimonials-section">
-        <h2>Client Testimonials</h2>
-        <div class="testimonial-container">
-            <div class="testimonial-item">
-                <p>"Khushi Construction ne hamara ghar bilkul time par aur best quality material ke saath banaya."</p>
-                <h4>- Rajesh Kumar, Meerut</h4>
-            </div>
-            <div class="testimonial-item">
-                <p>"Excellent service! The team is professional and very cooperative."</p>
-                <h4>- Priya Singh, Modinagar</h4>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="contact-section">
-        <div class="contact-container">
-            <h2>Contact Us for Quotation</h2>
-            <form id="contactForm">
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Email Address" required>
-                <textarea rows="5" placeholder="Project Details (Home, Office, Industrial Construction?)" required></textarea>
-                <button type="submit" class="submit-btn">Send Message</button>
-            </form>
-        </div>
-    </section>
-
-    <section id="map" class="map-section">
-        <h2>Visit Our Office</h2>
-        <div class="map-container">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d111667.5855701878!2d77.62536842514336!3d28.999661414457196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390c64f4575d1ad3%3A0x3f5c786733230559!2sMeerut%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1711361234567!5m2!1sen!2sin" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-        </div>
-    </section>
-
-    <footer>
-        <p>© 2026 KHUSHI Construction | Meerut & Modinagar</p>
-    </footer>
-
-    <a href="https://wa.me/8979770393" class="whatsapp-float" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            var a = 0;
-            $(window).scroll(function() {
-                var statsSection = $('#stats');
-                if (statsSection.length) {
-                    var oTop = statsSection.offset().top - window.innerHeight;
-                    if (a == 0 && $(window).scrollTop() > oTop) {
-                        $('.stat-number').each(function() {
-                            var $this = $(this), countTo = $this.attr('data-count');
-                            $({ countNum: $this.text() }).animate({ countNum: countTo }, {
-                                duration: 2000, easing: 'swing',
-                                step: function() { $this.text(Math.floor(this.countNum)); },
-                                complete: function() { $this.text(this.countNum); }
-                            });
-                        });
-                        a = 1;
-                    }
-                }
-            });
-        });
-    </script>
     <script src="script.js"></script>
 </body>
 </html>
