@@ -379,4 +379,19 @@ footer {
     .hero-content h1 {
         font-size: 24px !important; /* Mobile par heading choti karega */
     }
-}
+
+
+/* Line 381 ke baad ye add karein */
+    .nav-links li a {
+        font-size: 16px !important;
+        font-weight: 800 !important;
+        color: #000000 !important; /* Pure Black */
+        text-transform: uppercase;
+        padding: 8px 12px !important;
+    }
+    
+    .nav-links li a:hover {
+        color: #ff9800 !important; /* Orange on hover */
+    }
+
+} /* Ye aapki Line 382 hai jo ab niche shift ho jayegi */
