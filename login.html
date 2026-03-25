@@ -3,38 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Client Login | KHUSHI Construction</title>
+    <title>Premium Login | KHUSHI Construction</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body class="login-body">
-    <div class="login-container">
-        <div class="login-box">
-            <div class="login-header">
-                <h2>Welcome Back</h2>
-                <p>Login to manage your projects</p>
+<body class="login-page-body">
+    <div class="login-wrapper">
+        <div class="glass-login-box">
+            <div class="login-brand">
+                <i class="fas fa-hard-hat"></i>
+                <h2>KHUSHI <span>Construction</span></h2>
             </div>
-            <form id="login-form">
-                <div class="input-group">
+            
+            <form class="premium-form">
+                <h3>Welcome Back</h3>
+                <p>Please enter your details to login</p>
+
+                <div class="input-field">
+                    <input type="email" id="email" required>
+                    <label for="email">Email Address</label>
                     <i class="fas fa-envelope"></i>
-                    <input type="email" placeholder="Email Address" required>
                 </div>
-                <div class="input-group">
-                    <i class="fas fa-lock"></i>
-                    <input type="password" placeholder="Password" required>
+
+                <div class="input-field">
+                    <input type="password" id="password" required>
+                    <label for="password">Password</label>
+                    <i class="fas fa-eye" id="togglePassword" style="cursor: pointer;"></i>
                 </div>
-                <div class="forgot-pass">
-                    <a href="#">Forgot Password?</a>
+
+                <div class="form-options">
+                    <label class="remember-me">
+                        <input type="checkbox"> Remember me
+                    </label>
+                    <a href="#" class="forgot-link">Forgot Password?</a>
                 </div>
-                <button type="submit" class="login-btn">Login Now</button>
-                <div class="login-footer">
-                    <p>Don't have an account? <a href="#">Contact Admin</a></p>
-                </div>
+
+                <button type="submit" class="premium-login-btn">
+                    Sign In <i class="fas fa-arrow-right"></i>
+                </button>
             </form>
-            <div class="back-home">
-                <a href="index.html"><i class="fas fa-arrow-left"></i> Back to Home</a>
-            </div>
+            
+            <a href="index.html" class="go-back">
+                <i class="fas fa-chevron-left"></i> Back to Homepage
+            </a>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>

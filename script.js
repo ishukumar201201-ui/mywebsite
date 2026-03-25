@@ -87,3 +87,18 @@ toggleSwitch.addEventListener('change', function(e) {
         // localStorage.setItem('theme', 'light-mode');
     }
 });
+
+// --- PASSWORD SHOW/HIDE LOGIC ---
+const togglePassword = document.querySelector('#togglePassword');
+const passwordField = document.querySelector('#password');
+
+if (togglePassword) {
+    togglePassword.addEventListener('click', function () {
+        // Password field ka type check karein
+        const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
+        passwordField.setAttribute('type', type);
+        
+        // Icon change karein (Aankh khuli -> Aankh band)
+        this.classList.toggle('fa-eye-slash');
+    });
+}

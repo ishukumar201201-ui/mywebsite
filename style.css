@@ -648,3 +648,24 @@ input:checked + .slider:before {
 .back-home a:hover {
     color: #fff;
 }
+
+/* Eye Icon Position for Login Page */
+.input-field {
+    position: relative; /* Isse icon box ke andar rahega */
+}
+
+.input-field i#togglePassword {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #3f51b5; /* Icon ka color */
+    z-index: 100;
+    font-size: 18px;
+}
+
+/* Hover karne par thoda bright dikhega */
+.input-field i#togglePassword:hover {
+    color: #fff;
+}
