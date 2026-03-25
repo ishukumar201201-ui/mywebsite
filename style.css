@@ -105,19 +105,188 @@ input:checked + .slider:before { transform: translateX(26px); content: "🌙"; }
 }
 body.dark-mode .service-box { background-color: #1e1e1e !important; color: white; border: 1px solid #333; }
 
-/* --- 5. PREMIUM LOGIN PAGE (Glassmorphism) --- */
-.login-page-body {
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('hero.png');
-    background-size: cover; height: 100vh; display: flex; align-items: center; justify-content: center;
+
+/* --- NEW WAVY & ULTRA ROUNDED LOGIN STYLES --- */
+
+.wavy-login-body {
+    background-color: #79a1f2; /* Pure background color from image_17 */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><defs><linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:%233b5bdb"/><stop offset="100%" style="stop-color:%23001f60"/></linearGradient></defs><rect width="100%" height="100%" fill="url(%23g)"/></svg>');
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
 }
-.glass-login-box {
-    background: rgba(255, 255, 255, 0.08); backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 25px;
-    padding: 40px; width: 100%; max-width: 400px; color: #fff; text-align: center;
+
+/* Wavy Overlay Shapes (Simulated with pseudo-elements for now) */
+.wavy-login-body::before, .wavy-login-body::after {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    z-index: 1;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
 }
-.input-field { position: relative; margin-bottom: 30px; border-bottom: 2px solid rgba(255,255,255,0.2); }
-.input-field input { width: 100%; background: none; border: none; outline: none; padding: 10px 0; color: #fff; }
-.input-field i#togglePassword { position: absolute; right: 10px; top: 50%; transform: translateY(-50%); cursor: pointer; color: #3f51b5; }
+
+.wavy-login-wrapper {
+    z-index: 2;
+    padding: 20px;
+    width: 100%;
+    max-width: 900px; /* Wider for social icons line */
+    display: flex;
+    justify-content: center;
+}
+
+.ultra-glass-box {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(25px) saturate(180%);
+    -webkit-backdrop-filter: blur(25px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 40px; /* Very rounded borders */
+    padding: 50px 70px;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.3);
+    color: #fff;
+    width: 100%;
+    max-width: 500px; /* Box itself is smaller */
+}
+
+.login-brand-minimal {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.login-brand-minimal p {
+    font-size: 14px;
+    color: rgba(255,255,255,0.8);
+    margin-bottom: 5px;
+}
+
+.login-brand-minimal h2 {
+    font-size: 36px;
+    font-weight: 700;
+}
+
+/* Input Fields with specific rounding */
+.input-block {
+    margin-bottom: 20px;
+    text-align: left;
+    position: relative;
+}
+
+.input-block label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #fff;
+}
+
+.input-block input {
+    width: 100%;
+    padding: 15px 20px;
+    background: #fff; /* White inputs as in image_17 */
+    border: none;
+    border-radius: 12px; /* Less rounded inputs */
+    color: #000;
+    font-size: 15px;
+}
+
+.input-block input::placeholder {
+    color: #aaa;
+}
+
+/* Password Eye in specific position */
+.input-block i#togglePassword {
+    position: absolute;
+    right: 15px;
+    top: 45px; /* Adjust based on input height */
+    color: #777; /* Neutral color as in image_17 */
+    cursor: pointer;
+}
+
+.forgot-wrapper {
+    text-align: left;
+    margin-top: -10px;
+    margin-bottom: 25px;
+}
+
+.forgot-wavy {
+    color: rgba(255,255,255,0.8);
+    font-size: 13px;
+    text-decoration: none;
+}
+
+/* Specific button styles */
+.wavy-btn-signin {
+    width: 100%;
+    padding: 15px;
+    background: #001f60; /* Dark blue button */
+    border: none;
+    border-radius: 15px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.wavy-btn-signin:hover {
+    background: #002e8c;
+}
+
+.divider-wavy {
+    text-align: center;
+    margin: 30px 0;
+    position: relative;
+}
+
+.divider-wavy span {
+    background: none; /* Text floats */
+    padding: 0 10px;
+    color: rgba(255,255,255,0.7);
+    font-size: 12px;
+}
+
+/* Social Buttons line */
+.social-login-wavy {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border-radius: 12px;
+    color: #000;
+    font-size: 20px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.social-icon:hover {
+    background: #f1f1f1;
+    transform: translateY(-2px);
+}
+
+.signup-footer-wavy {
+    font-size: 13px;
+    color: rgba(255,255,255,0.7);
+}
+
+.signup-footer-wavy a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
 
 /* --- 6. WHATSAPP & ANIMATIONS --- */
 .whatsapp-float {
